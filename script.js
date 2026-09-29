@@ -1,22 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const btnNext = document.getElementById("btnNext");
-	const btnPrev = document.getElementById("btnPrev");
-	const paragraph = document.getElementById("mainParagraph");
-
+	const c = (b) =>
+			document.getElementById(b) || document.querySelectorAll(`.${b}`),
+		d = c("btnNext"),
+		f = c("btnPrev"),
+		g = (l) =>
+			l.addEventListener("click", (e) =>
+				handleNavigation(e, l.getAttribute("href")),
+			);
 	function handleNavigation(e, targetUrl) {
-		e.preventDefault();
-		paragraph.classList.add("slide-out-right");
-		setTimeout(() => {
-			window.location.href = targetUrl;
-		}, 450);
+		(e.preventDefault(), c("mainParagraph").classList.add("slide-out-right"));
+		for (const a of [
+			c("btn-text"),
+			c("badge-tag"),
+			c("background-decor"),
+			[c("pageTitle")],
+			c("card"),
+		]) {
+			for (const b of a) {
+				b.classList.add("ease-out-ewe");
+			}
+		}
+		setTimeout(() => (window.location.href = targetUrl), 450);
 	}
-
-	if (btnNext)
-		btnNext.addEventListener("click", (e) =>
-			handleNavigation(e, btnNext.getAttribute("href")),
-		);
-	if (btnPrev)
-		btnPrev.addEventListener("click", (e) =>
-			handleNavigation(e, btnPrev.getAttribute("href")),
-		);
+	(d ? g(d) : 0, f ? g(f) : 0);
 });
