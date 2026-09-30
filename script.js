@@ -15,11 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			c("background-decor"),
 			[c("pageTitle")],
 			c("card"),
-		]) {
-			for (const b of a) {
-				b.classList.add("ease-out-ewe");
-			}
-		}
+		]) for (const b of a) b.classList.add("ease-out-ewe");
 		setTimeout(() => (window.location.href = targetUrl), 450);
 	}
 	(d ? g(d) : 0, f ? g(f) : 0);
