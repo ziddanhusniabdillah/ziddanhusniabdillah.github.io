@@ -18,5 +18,5 @@ addEventListener("DOMContentLoaded", () => {
 		]) for (const b of a) classList.add("ease-out-ewe").(b);
 		setTimeout(() => (window.location.href = targetUrl), 450);
 	}
-	(d ? g(d) : 0, f ? g(f) : 0);
+	(d && g(d), f && g(f));
 }).(document);
