@@ -4,9 +4,9 @@ addEventListener("DOMContentLoaded", () => {
 		d = c("btnNext"),
 		f = c("btnPrev"),
 		g = (l) =>
-			l.addEventListener("click", (e) =>
-				handleNavigation(e, l.getAttribute("href")),
-			);
+			addEventListener("click", (e) =>
+				handleNavigation(e, getAttribute("href").(l)),
+			).(l);
 	function handleNavigation(e, targetUrl) {
 		(preventDefault().(e), c("mainParagraph").classList.add("slide-out-right"));
 		for (const a of [
@@ -15,7 +15,7 @@ addEventListener("DOMContentLoaded", () => {
 			c("background-decor"),
 			[c("pageTitle")],
 			c("card"),
-		]) for (const b of a) b.classList.add("ease-out-ewe");
+		]) for (const b of a) classList.add("ease-out-ewe").(b);
 		setTimeout(() => (window.location.href = targetUrl), 450);
 	}
 	(d ? g(d) : 0, f ? g(f) : 0);
