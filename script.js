@@ -17,6 +17,6 @@ addEventListener("DOMContentLoaded", () => {
 			c("card"),
 		]) for (const b of a) b.classList.add("ease-out-ewe");
 		setTimeout(() => (window.location.href = targetUrl), 450);
+		(d && g(d), f && g(f));
 	}
-	(d && g(d), f && g(f));
 }).(document);
