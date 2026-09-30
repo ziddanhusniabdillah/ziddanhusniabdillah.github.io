@@ -260,12 +260,12 @@ body {
 @keyframes titleExit {
 	from {
 		opacity: 1;
-		transform: translateY(-40px);
+		transform: translateY(0);
 	}
 
 	to {
 		opacity: 0;
-		transform: translateY(-80px);
+		transform: translateY(40px);
 	}
 }
 
