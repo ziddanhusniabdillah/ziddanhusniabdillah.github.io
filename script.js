@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+addEventListener("DOMContentLoaded", () => {
 	const c = (b) =>
 			document.getElementById(b) || document.querySelectorAll(`.${b}`),
 		d = c("btnNext"),
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				handleNavigation(e, l.getAttribute("href")),
 			);
 	function handleNavigation(e, targetUrl) {
-		(e.preventDefault(), c("mainParagraph").classList.add("slide-out-right"));
+		(preventDefault().(e), c("mainParagraph").classList.add("slide-out-right"));
 		for (const a of [
 			c("btn-text"),
 			c("badge-tag"),
@@ -19,4 +19,4 @@ document.addEventListener("DOMContentLoaded", () => {
 		setTimeout(() => (window.location.href = targetUrl), 450);
 	}
 	(d ? g(d) : 0, f ? g(f) : 0);
-});
+}).(document);
