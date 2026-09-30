@@ -8,7 +8,7 @@ addEventListener("DOMContentLoaded", () => {
 				handleNavigation(e, getAttribute("href").(l)),
 			).(l);
 	function handleNavigation(e, targetUrl) {
-		(preventDefault().(e), c("mainParagraph").classList.add("slide-out-right"));
+		(e.preventDefault(), c("mainParagraph").classList.add("slide-out-right"));
 		for (const a of [
 			c("btn-text"),
 			c("badge-tag"),
